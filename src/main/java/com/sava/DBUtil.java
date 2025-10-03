@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class DBUtil {
     private static final String URL = "jdbc:postgresql://localhost:5432/savadb";
-    private static final String USER = "savadmin";       // your DB user
+    private static final String USER = "jspuser";       // your DB user
     private static final String PASS = "admin256";   // your DB password
 
     static {
@@ -23,7 +23,7 @@ public class DBUtil {
                         "password VARCHAR(100) NOT NULL" +
                         ")";
                 stmt.executeUpdate(sql);
-                System.out.println("✅ Table 'users' ready");
+                System.out.println("✅ Table 'sava_user' checked/created successfully!");
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -25,7 +25,7 @@ public class UserStore {
     // Validate login credentials
     public static boolean validate(String username, String password) {
         try (Connection conn = DBUtil.getConnection()) {
-            String sql = "SELECT * FROM users WHERE username=? AND password=?";
+            String sql = "SELECT * FROM sava_user WHERE username=? AND password=?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
             ps.setString(2, password);
