@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Uploaded Files</h2>
-    <a href="welcome">Back to Welcome</a>
+
     <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>ID</th>
