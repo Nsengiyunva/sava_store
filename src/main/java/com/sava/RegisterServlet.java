@@ -13,7 +13,7 @@ public class RegisterServlet extends HttpServlet {
         if (UserStore.addUser(username, password)) {
             response.sendRedirect("login.jsp");
         } else {
-            response.getWriter().println("Username already exists. Go back and try another.");
+            response.getWriter().println("Username already exists or error occurred.");
         }
     }
 }
