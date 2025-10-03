@@ -30,4 +30,20 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.sava.FileUploadServlet</servlet-class>
+        <multipart-config>
+            <location>/tmp</location>
+            <max-file-size>10485760</max-file-size> <!-- 10MB -->
+            <max-request-size>15728640</max-request-size> <!-- 15MB -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- 1MB -->
+        </multipart-config>
+    </servlet>
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>FileUploadServlet</servlet-name>-->
+<!--        <url-pattern>/upload</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>

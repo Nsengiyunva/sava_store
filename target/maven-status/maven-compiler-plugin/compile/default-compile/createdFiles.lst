@@ -1,6 +1,0 @@
-com/sava/User.class
-com/sava/UserStore.class
-com/sava/LogoutServlet.class
-com/sava/LoginServlet.class
-com/sava/DBUtil.class
-com/sava/RegisterServlet.class
