@@ -20,7 +20,6 @@
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">ID</th>
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">File Name</th>
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Uploaded At</th>
-                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Download</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
@@ -33,12 +32,6 @@
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getId() %></td>
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getFileName() %></td>
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getUploadedAt() %></td>
-                        <td class="px-4 py-2 text-sm">
-                            <a href="download?file=<%= f.getFileName() %>" target="_blank"
-                               class="text-blue-600 hover:underline">
-                               Download
-                            </a>
-                        </td>
                     </tr>
                     <%      }
                         } else { %>
