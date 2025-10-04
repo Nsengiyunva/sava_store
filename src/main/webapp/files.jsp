@@ -25,7 +25,7 @@
             <td><%= f.getId() %></td>
             <td><%= f.getFileName() %></td>
             <td><%= f.getUploadedAt() %></td>
-            <td><a href="<%= f.getFilePath() %>" target="_blank">Download</a></td>
+            <td><a href="download?file=<%= f.getFileName() %>" target="_blank">Download</a>
         </tr>
         <%      }
             }
