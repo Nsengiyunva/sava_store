@@ -9,7 +9,7 @@
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-        <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Sign In</h1>
+        <h1 class="text-3xl font-bold text-center text-[#fb8f0c] mb-6">Sign In</h1>
 
         <% if (request.getParameter("error") != null) { %>
             <p class="text-red-500 text-center mb-4">Invalid username or password</p>
@@ -25,6 +25,7 @@
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
                     placeholder="Enter your username"
                     required
+                    autocomplete="off"
                 >
             </div>
 
@@ -37,12 +38,13 @@
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
                     placeholder="Enter your password"
                     required
+                    autocomplete="off"
                 >
             </div>
 
             <button
                 type="submit"
-                class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+                class="w-full bg-[#fb8f0c] text-white font-semibold py-2 rounded-lg hover:bg-[#fb8f0c] transition duration-200"
             >
                 Login
             </button>

@@ -35,14 +35,14 @@
 
             <button
                 type="submit"
-                class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+                class="w-full bg-[#fb8f0c] text-white font-semibold py-2 rounded-lg hover:bg-[#fb8f0c] transition duration-200"
             >
                 Upload
             </button>
         </form>
 
         <div class="mt-6 flex justify-between text-sm">
-            <a href="files" class="text-blue-600 hover:underline">View Files</a>
+            <a href="files" class="text-[#fb8f0c] hover:underline">View Files</a>
             <a href="logout" class="text-red-600 hover:underline">Logout</a>
         </div>
     </div>
