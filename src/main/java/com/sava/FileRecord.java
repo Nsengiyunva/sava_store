@@ -6,7 +6,7 @@ public class FileRecord {
     private int id;
     private String fileName;
     private String filePath;
-    private String uploadedAt;
+    private Timestamp uploadedAt;
     private String app_type;
     private String app_name;
     private String app_version;
@@ -18,7 +18,6 @@ public class FileRecord {
         this.fileName = fileName;
         this.filePath = filePath;
         this.uploadedAt = uploadedAt;
-        this.version = version;
         this.app_type = app_type;
         this.app_name = app_name;
         this.app_version = app_version;
@@ -31,6 +30,6 @@ public class FileRecord {
     public Timestamp getUploadedAt() { return uploadedAt; }
     public String getType() { return app_type; }
     public String getVersion() { return app_version; }
-    public String getAppPlatform() { return app_type; }
+    public String getAppPlatform() { return app_platform; }
     public String getAppName() { return app_version; }
 }

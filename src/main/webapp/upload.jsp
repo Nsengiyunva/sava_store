@@ -23,6 +23,31 @@
                 <label for="file" class="block text-sm font-medium text-gray-700 mb-2">
                     Select file to upload
                 </label>
+
+                <label>
+                        App Name:
+                        <input type="text" name="appName" required class="border rounded p-2 w-full">
+                    </label>
+                    <br>
+
+                    <label>
+                        App Version:
+                        <input type="number" name="appVersion" required class="border rounded p-2 w-full">
+                    </label>
+                    <br>
+
+                    <label>
+                        App Platform:
+                        <input type="text" name="appPlatform" required class="border rounded p-2 w-full">
+                    </label>
+                    <br>
+
+                    <label>
+                        App Type:
+                        <input type="text" name="appType" required class="border rounded p-2 w-full">
+                    </label>
+                    <br>
+
                 <input
                     type="file"
                     id="file"

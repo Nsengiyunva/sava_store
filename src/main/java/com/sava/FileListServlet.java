@@ -11,9 +11,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
 @WebServlet("/files")
 public class FileListServlet extends HttpServlet {
 
@@ -31,7 +28,7 @@ public class FileListServlet extends HttpServlet {
             Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
 
-            String sql = "SELECT DISTINCT id, file_name, file_path, uploaded_at FROM uploaded_files ORDER BY uploaded_at DESC";
+            String sql = "SELECT DISTINCT id, file_name, file_path, uploaded_at, app_type, app_platform, app_version, app_name FROM uploaded_files ORDER BY uploaded_at DESC";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
@@ -40,7 +37,11 @@ public class FileListServlet extends HttpServlet {
                         rs.getInt("id"),
                         rs.getString("file_name"),
                         rs.getString("file_path"),
-                        rs.getTimestamp("uploaded_at")
+                        rs.getTimestamp("uploaded_at"),
+                        rs.getString("app_type"),
+                        rs.getString("app_platform"),
+                        rs.getString("app_version"),
+                        rs.getString("app_name")
                 );
                 files.add(file);
             }
