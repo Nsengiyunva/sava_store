@@ -20,6 +20,8 @@
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">ID</th>
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">File Name</th>
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Uploaded At</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Type</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Version</th>
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Download</th>
                     </tr>
                 </thead>
@@ -33,17 +35,20 @@
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getId() %></td>
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getFileName() %></td>
                         <td class="px-4 py-2 text-sm text-gray-700"><%= f.getUploadedAt() %></td>
+                        <td class="px-4 py-2 text-sm text-gray-700"><%= f.getType() %></td>
+                        <td class="px-4 py-2 text-sm text-gray-700"><%= f.getVersion() %></td>
+                        <td class="px-4 py-2 text-sm text-gray-700"><%= f.getAppPlatform() %></td>
+                        <td class="px-4 py-2 text-sm text-gray-700"><%= f.getAppName() %></td>
                         <td class="px-4 py-2 text-sm">
-                            <a href="<%= f.getFilePath() %>" target="_blank"
-                               class="text-blue-600 hover:underline">
-                               Download
-                            </a>
+                            <a class="text-blue-600 hover:underline" href="download?file=<%= f.getFileName() %>" target="_blank">Download</a>
                         </td>
                     </tr>
                     <%      }
                         } else { %>
                     <tr>
-                        <td colspan="4" class="px-4 py-4 text-center text-gray-500">No files uploaded yet.</td>
+                        <td colspan="4" class="px-4 py-4 text-center text-gray-500">
+                            No files uploaded yet.
+                        </td>
                     </tr>
                     <% } %>
                 </tbody>
